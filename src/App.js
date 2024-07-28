@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CreatePost from './components/CreatePost';
 import ViewAll from './components/ViewAll';
 import Nav from './components/Nav';
+import ViewMyPost from './components/ViewMyPost';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/SignUp' element={<SignUp/>}/>
       <Route path='/CreatePost' element={<CreatePost/>}/>
       <Route path='/ViewAll' element={<ViewAll/>}/>
+      <Route path='/ViewMyPost' element={<ViewMyPost/>}/>
 
     </Routes>
     </BrowserRouter>

@@ -1,6 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Nav = () => {
+
+    const navigate = useNavigate()
+
+    const LogOut=() => {
+        sessionStorage.clear()
+        navigate("/SignIn")
+    }
+
   return (
 
     <div>
@@ -17,13 +26,13 @@ const Nav = () => {
           <a class="nav-link active" aria-current="page" href="/CreatePost">Create a Post</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">View My Post</a>
+          <a class="nav-link" href="/ViewMyPost">View My Post</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/ViewAll">View All Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <button onClick={LogOut} className="btn btn-success">LogOUT</button>
         </li>
       </ul>
     </div>
