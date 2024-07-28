@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
 
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     const [input, setInput] = useState(
         {"email":"",
@@ -16,7 +16,7 @@ const SignIn = () => {
 
     const readValues=() =>{
         console.log(input)
-    }
+    
 
         axios.post("http://localhost:8080/signin",input).then(
             (response) => {
@@ -25,10 +25,6 @@ const SignIn = () => {
                     {
                         alert("Incorrect Password")   
                     } 
-                    else if(response.data.status="Invalid Email ID")
-                    {
-                            alert("Invalid Email ID")
-                    }
                     else
                     {
                         let token = response.data.token
@@ -40,7 +36,7 @@ const SignIn = () => {
                         sessionStorage.setItem("userId",userId)
                         sessionStorage.setItem("token",token)
 
-                        navigate("/create")
+                        navigate("/CreatePost")
                     }
             }
         ).catch(
@@ -48,7 +44,7 @@ const SignIn = () => {
                 console.log(error)
             }
         )
-
+    }
   return (
     <div>
         <div className="container">
