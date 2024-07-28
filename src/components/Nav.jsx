@@ -7,38 +7,23 @@ const Nav = () => {
 
     const LogOut=() => {
         sessionStorage.clear()
-        navigate("/SignIn")
+        navigate("/")
     }
 
   return (
-
     <div>
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/CreatePost">Create a Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ViewMyPost">View My Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ViewAll">View All Posts</a>
-        </li>
-        <li class="nav-item">
-          <button onClick={LogOut} className="btn btn-success">LogOUT</button>
-        </li>
-      </ul>
+        <nav class="navbar navbar-expand-lg bg-tertiary ">     
+        <div class="container-fluid">
+        <img src="https://img.freepik.com/premium-vector/word-concept-color-geometric-shapes-blog_205544-12899.jpg" alt="Logo" width="200" height="120" class="d-inline-block align-text-top"></img>
+        <a class="navbar-brand text-danger fw-bold fs-1">BLOGAPP</a>
+        <a href="/CreatePost" className="btn btn-dark">CREATE A POST</a>
+        <a href="/ViewMyPost" className="btn btn-dark">VIEW MY POSTS</a>
+        <a href="/ViewAll" className="btn btn-dark">VIEW ALL POSTS</a>
+        <button onClick={LogOut} className="btn btn-danger">LOGOUT</button>
     </div>
-  </div>
-</nav>
-    </div>
+    </nav>
+    <hr class="border border-success border-1 opacity-50"></hr>
+</div>
   )
 }
 

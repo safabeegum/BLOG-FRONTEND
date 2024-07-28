@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import ViewMyPost from './components/ViewMyPost';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import EntryPage from './components/EntryPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/ViewAll' element={<ViewAll/>}/>
       <Route path='/ViewMyPost' element={<ViewMyPost/>}/>
       <Route path='/Navbar' element={<Navbar/>}/>
+      <Route path='/EntryPage' element={<EntryPage/>}/>
 
     </Routes>
     </BrowserRouter>
