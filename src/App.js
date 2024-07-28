@@ -7,17 +7,21 @@ import CreatePost from './components/CreatePost';
 import ViewAll from './components/ViewAll';
 import Nav from './components/Nav';
 import ViewMyPost from './components/ViewMyPost';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-    <Route path='/Nav' element={<Nav/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/Nav' element={<Nav/>}/>
       <Route path='/SignIn' element={<SignIn/>}/>
       <Route path='/SignUp' element={<SignUp/>}/>
       <Route path='/CreatePost' element={<CreatePost/>}/>
       <Route path='/ViewAll' element={<ViewAll/>}/>
       <Route path='/ViewMyPost' element={<ViewMyPost/>}/>
+      <Route path='/Navbar' element={<Navbar/>}/>
 
     </Routes>
     </BrowserRouter>

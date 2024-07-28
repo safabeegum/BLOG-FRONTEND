@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import Navbar from './Navbar'
 
 const SignUp = () => {
 
@@ -67,6 +68,7 @@ const SignUp = () => {
 
   return (
     <div>
+        <Navbar/>
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -111,9 +113,7 @@ const SignUp = () => {
                             <button onClick={readValue} className="btn btn-success">REGISTER</button>
                         </div>
 
-                        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <a href="/SignIn" className="btn btn-primary">Back to LogIn</a>
-                        </div>
+                        
                         {/* signup form end */}
                     </div>
                 </div>
