@@ -37,7 +37,7 @@ const SignIn = () => {
                         sessionStorage.setItem("userId",userId)
                         sessionStorage.setItem("token",token)
 
-                        navigate("/CreatePost")
+                        navigate("/EntryPage")
                     }
             }
         ).catch(
